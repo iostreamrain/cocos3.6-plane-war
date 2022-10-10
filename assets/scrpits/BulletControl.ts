@@ -7,7 +7,6 @@ export class BulletControl extends Component {
     @property
     speed: number = 800;
 
-    i = 0;
     start() {
         let collider = this.getComponent(Collider2D);
         if (collider) {  
@@ -26,7 +25,6 @@ export class BulletControl extends Component {
             this.node.destroy();
         }
     }
-
 
     onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null) {
         console.log("ok on Collision Enter");
